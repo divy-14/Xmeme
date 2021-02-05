@@ -1,0 +1,20 @@
+{% extends 'postmeme/base.html' %}
+{% block content %}
+
+    <h1>Welcome to my world of memes! Submit meme</h1>
+
+    {% if messages %}
+        <div class="alert alert-success alert-dismissible">
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+        </div>
+    {% endif %}
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Save" />
+    </form>
+
+{% endblock %}

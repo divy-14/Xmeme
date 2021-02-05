@@ -1,8 +1,6 @@
 {% extends 'postmeme/base.html' %}
 {% block content %}
 
-    <h1>Welcome to my world of memes! Submit meme</h1>
-
     {% if messages %}
         <div class="alert alert-success alert-dismissible">
         {% for message in messages %}
@@ -10,11 +8,33 @@
         {% endfor %}
         </div>
     {% endif %}
-    
-    <form method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Save" />
-    </form>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5">
+            <h2 align="center">Add Meme</h2>
+        </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+        <div class="col-md-5">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="caption">Caption</label>
+                    <textarea name="caption" class="form-control" id="caption" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="url">Meme Url</label>
+                    <input type="text" name="url" class="form-control" id="url" required>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+        </div>
+
 
 {% endblock %}

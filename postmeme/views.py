@@ -14,5 +14,6 @@ def home(request):
         form = PostForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Meme created successfully')
+            messages.success(
+                request, 'Your Meme has been added to this vast ocean successfully')
         return HttpResponseRedirect(reverse('postmeme-home'))

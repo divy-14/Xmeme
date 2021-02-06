@@ -21,9 +21,13 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('postmeme.urls')),
-    path('seememes/', include('seememe.urls')),
+    path('seememe/', include('seememe.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # we add this url to denote that access the image over media_url using http and the
 # media is present in the media_root folder
+
+# seememe vaala jo url hai if we want to use static files in seememe
+# then seememe app should have same url as appname i.e seememe
+# ex: seememe/ -> static/seememe/style.css

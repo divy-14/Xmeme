@@ -1,14 +1,25 @@
 {% extends 'seememe/base.html' %}
     {% block content %}
-        <br>
-            <div class="row">
-                {% for post in posts %}
-                    <div class="col-lg-4 col-md-6">
-                        <img src="{{post.url}}" class="img-fluid mb-2">
-                        <h3 align="center">{{ post.name }}</h3>
-                        <p>{{ post.caption }}</p>
+        <!-- <br> -->  
+        <div id='products' class="col-lg-9 mx-auto">
+			<div class="row mx-auto">
+            {% for post in posts %}
+                <div class="card mx-auto mb-3" style="width: 20rem;">
+                    <div class="card-header"> </div>
+                    <img src="{{post.url}}" class="card-img-top" alt="meme">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ post.name }}</h3>
+                        <p class="card-text">{{ post.caption }}</p>
                     </div>
-                {% endfor %}
-            </div>
-    {% endblock %}
+                    </div>
+                
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}   
 
+      <!-- <div class="col-lg-4 col-md-6">
+        <img src="{{post.url}}" class="img-fluid mb-2">
+        <h3 align="center">{{ post.name }}</h3>
+        <p>{{ post.caption }}</p>
+     </div> -->

@@ -1,52 +1,48 @@
 {% extends 'postmeme/base.html' %}
 {% block content %}
-
-    
-
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-3">
-            <div id="typing">
-                <h2 class="newtext"><span class="write"> Share </span><span id="typed"></span> </h2>
-              </div>
-              <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-              <script>
-                var typed = new Typed('#typed', {
-                  strings: ["Memes", "Love", "friendship","शेयर"],
-                  backSpeed: 50,
-                  typeSpeed: 60,
-                  loop: true
-                });
-              </script>
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-3">
+        <div id="typing">
+            <h2 class="newtext"><span class="write"> Share </span><span id="typed"></span> </h2>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+            <script>
+            var typed = new Typed('#typed', {
+                strings: ["Memes", "Love", "friendship","शेयर"],
+                backSpeed: 50,
+                typeSpeed: 60,
+                loop: true
+            });
+            </script>
         </div>
-        <div class="row justify-content-center mt-5">
-        <div class="col-md-5">
-            <form method="POST">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="caption">Caption</label>
-                    <textarea name="caption" class="form-control" id="caption" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="url">Meme Url</label>
-                    <input type="text" name="url" class="form-control" id="url" required>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-primary">Save</button> 
-                <br>
-                <br>
-                {% if messages %}
-                    {% for message in messages %}
-                        <p style= color:darkcyan>{{ message }}<p>
-                    {% endfor %}
-                {% endif %}
-            </form>
-        </div>
-        </div>
-
+    </div>
+    <div class="row justify-content-center mt-5">
+    <div class="col-md-5">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="caption">Caption</label>
+                <textarea name="caption" class="form-control" id="caption" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="url">Meme Url</label>
+                <input type="text" name="url" class="form-control" id="url" required>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Save</button> 
+            <br>
+            <br>
+            {% if messages %}
+                {% for message in messages %}
+                    <p style= color:darkcyan>{{ message }}<p>
+                {% endfor %}
+            {% endif %}
+        </form>
+    </div>
+    </div>
 
 {% endblock %}

@@ -1,16 +1,14 @@
 {% extends 'seememe/base.html' %}
-{% block content %}
-<h1>Hello see your memes here</h1>
-<br>
-{% for post in posts %}
+    {% block content %}
+        <br>
+            <div class="row">
+                {% for post in posts %}
+                    <div class="col-lg-4 col-md-6">
+                        <img src="{{post.url}}" class="img-fluid mb-2">
+                        <h3 align="center">{{ post.name }}</h3>
+                        <p>{{ post.caption }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+    {% endblock %}
 
-    <h1>{{ post.name }}</h1>
-    <p>{{ post.caption }}</p>
-
-    <img src="{{post.url}}" alt="" height=300 width=300>
-    <br>
-    <br>
-
-{% endfor %}
-
-{% endblock %}

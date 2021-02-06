@@ -2,17 +2,30 @@
 {% block content %}
 
     {% if messages %}
-        <div class="alert alert-success alert-dismissible">
-        {% for message in messages %}
-            <p>{{ message }}</p>
-        {% endfor %}
+        <!-- <div class="alert alert-success alert-dismissible"> -->
+        <div class="col-md3">
+            {% for message in messages %}
+                <h4 align="center">{{ message }}</h3>
+            {% endfor %}
         </div>
+        <!-- </div> -->
     {% endif %}
 
     <div class="row justify-content-center mt-5">
-        <div class="col-md-5">
-            <h2 align="center">Add Meme</h2>
-        </div>
+        <div class="col-md-3">
+            <div id="typing">
+                <h2 class="newtext"><span class="write"> Share </span><span id="typed"></span> </h2>
+              </div>
+              <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+              <script>
+                var typed = new Typed('#typed', {
+                  strings: ["Memes", "Love", "friendship","शेयर"],
+                  backSpeed: 50,
+                  typeSpeed: 60,
+                  loop: true
+                });
+              </script>
+            </div>
         </div>
         <div class="row justify-content-center mt-5">
         <div class="col-md-5">

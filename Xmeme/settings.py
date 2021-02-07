@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'postmeme',
     'seememe',
+    'memes',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

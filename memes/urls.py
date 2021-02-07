@@ -15,20 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('postmeme.urls')),
-    path('seememe/', include('seememe.urls')),
-    path('memes/', include('memes.urls')),
+    path('', views.PostList.as_view(), name="memes-api"),
 ]
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-# we add this url to denote that access the image over media_url using http and the
-# media is present in the media_root folder
-
-# seememe vaala jo url hai if we want to use static files in seememe
-# then seememe app should have same url as appname i.e seememe
-# ex: seememe/ -> static/seememe/style.css

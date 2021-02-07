@@ -42,6 +42,7 @@ class PostParticular(generics.RetrieveUpdateAPIView):
     # if we are successful in updating we return status code 200
     # else we return status code 404
 
+    # this patch does not allow to change name
     def patch(self, request, pk):
         try:
             testmodel_object = Post.objects.get(pk=pk)

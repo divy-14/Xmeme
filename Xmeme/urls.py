@@ -22,7 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('postmeme.urls')),
     path('seememe/', include('seememe.urls')),
-    path('memes/', include('memes.urls')),
+    path('memes', include('memes.urls')),
+    path('memes/', include('memes.urlsslash')),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

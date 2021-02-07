@@ -19,6 +19,6 @@ from . import views
 
 urlpatterns = [
     path('', views.PostList.as_view(), name="memes-api"),
-    path('<int:pk>/', views.PostParticular.as_view(), name="memes-api-p"),
+    path('/<int:pk>', views.PostParticular.as_view(), name="memes-api-p"),
 
 ]

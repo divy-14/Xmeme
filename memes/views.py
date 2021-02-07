@@ -1,6 +1,6 @@
 from .serializers import PostSerializer, PostUpdateSeralizer
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from rest_framework import generics, permissions, status
 from postmeme.models import Post
 from rest_framework.response import Response
@@ -38,3 +38,18 @@ class PostParticular(generics.RetrieveUpdateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostUpdateSeralizer
     permission_classes = [permissions.AllowAny]
+
+    # if we are successful in updating we return status code 200
+    # else we return status code 404
+
+    def patch(self, request, pk):
+        try:
+            testmodel_object = Post.objects.get(pk=pk)
+            # set partial=True to update a data partially
+            serializer = PostUpdateSeralizer(
+                testmodel_object, data=request.data, partial=True)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(status=status.HTTP_200_OK)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)

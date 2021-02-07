@@ -26,7 +26,7 @@ SECRET_KEY = '126vf6a7ok!20n0^8tx%5&j&aeacu1$yomeec5w2raj6ljn1j3'
 DEBUG = True
 APPEND_SLASH = True
 ALLOWED_HOSTS = []
-
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.mysite.com']
 
 # Application definition
 

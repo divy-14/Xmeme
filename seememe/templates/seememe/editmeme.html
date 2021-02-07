@@ -18,15 +18,7 @@
 <br>
 <br>
 
-{% if messages %}
-{% for message in messages %}
-<h4 align="center" style=color:rgb(44, 228, 44)>{{ message }}</h4>
-{% endfor %}
-{% endif %}
-<br>
-<br>
-
-<div class="card mx-auto mb-3" id="memes" style="width: 20rem;">
+<div class="card mx-auto border-success mb-3" id="memes" style="width: 20rem;">
     <div class="card-header"> </div>
     <img src="{{form.url}}" class="card-img-top" alt="meme" />
     <div class="card-body">
@@ -34,6 +26,14 @@
         <p align="center" class="card-text">{{ form.caption }}</p>
     </div>
 </div>
+
+{% if messages %}
+<br>
+<br>
+{% for message in messages %}
+<h4 align="center" style=color:rgb(44, 228, 44)>{{ message }}</h4>
+{% endfor %}
+{% endif %}
 
 <div class="row justify-content-center mt-5">
     <div class="col-md-5">

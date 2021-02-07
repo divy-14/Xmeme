@@ -26,9 +26,12 @@
             <div class="card-body">
                 <h3 align="center" class="card-title">{{ post.name }}</h3>
                 <p align="center" class="card-text">{{ post.caption }}</p>
+                <div class="text-center">
+                    <a href="{% url 'seememe-edit' post.id %}" class="btn btn-primary">Edit Meme :)</a>
+                </div>
+
             </div>
         </div>
-
         {% endfor %}
     </div>
 </div>

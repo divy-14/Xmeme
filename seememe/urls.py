@@ -19,4 +19,5 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name="seememe-home"),
+    path('<int:meme_pk>/', views.editMeme, name="seememe-edit"),
 ]

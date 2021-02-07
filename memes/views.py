@@ -31,3 +31,10 @@ class PostList(generics.ListCreateAPIView):
             status=status.HTTP_201_CREATED,
             headers=headers
         )
+
+
+class PostParticular(generics.RetrieveAPIView):
+
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = [permissions.AllowAny]

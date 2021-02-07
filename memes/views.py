@@ -13,24 +13,28 @@ class PostList(generics.ListCreateAPIView):
 
     def create(self, request, *args, **kwargs):
 
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        self.perform_create(serializer)
-        headers = self.get_success_headers(serializer.data)
+        try:
+            serializer = self.get_serializer(data=request.data)
+            serializer.is_valid(raise_exception=True)
+            self.perform_create(serializer)
+            headers = self.get_success_headers(serializer.data)
 
-        # Original Response (inside the `CreateModelMixin` class)
-        # return Response(
-        #     serializer.data,
-        #     status=status.HTTP_201_CREATED,
-        #     headers=headers
-        # )
+            # Original Response (inside the `CreateModelMixin` class)
+            # return Response(
+            #     serializer.data,
+            #     status=status.HTTP_201_CREATED,
+            #     headers=headers
+            # )
 
-        # We will replace the original response with this line
-        return Response(
-            {'id': serializer.data.get('id')},
-            status=status.HTTP_201_CREATED,
-            headers=headers
-        )
+            # We will replace the original response with this line
+            return Response(
+                {'id': serializer.data.get('id')},
+                status=status.HTTP_201_CREATED,
+                headers=headers
+            )
+
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
 
 class PostParticular(generics.RetrieveUpdateAPIView):

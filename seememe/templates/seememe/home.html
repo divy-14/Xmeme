@@ -1,34 +1,35 @@
 {% extends 'seememe/base.html' %}
-    {% block content %}
+{% block content %}
 
-        <div id="typing">
-            <h2 align="center" class="newtext"><span class="write"> Share </span><span id="typed"></span> </h2>
+<div id="typing">
+    <h2 align="center" class="newtext"><span class="write"> </span><span id="typed"
+            style="color: rgb(46, 58, 170);"></span> </h2>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script>
+    var typed = new Typed('#typed', {
+        strings: ["Share Memes", "Share Love", "Share Happiness", "Share Friendship", "शेयर मीमस", "शेयर लव", "शेयर फ्रेंडशिप", "शेयर हैप्पीनेस"],
+        backSpeed: 60,
+        typeSpeed: 60,
+        loop: true
+    });
+</script>
+</div>
+<br>
+<br>
+<div id='products' class="col-lg-9 mx-auto">
+    <div class="row mx-auto">
+        {% for post in posts %}
+        <div class="card mx-auto mb-3" id="memes" style="width: 20rem;">
+            <div class="card-header"> </div>
+            <img src="{{post.url}}" class="card-img-top" alt="meme" />
+            <div class="card-body">
+                <h3 align="center" class="card-title">{{ post.name }}</h3>
+                <p align="center" class="card-text">{{ post.caption }}</p>
             </div>
-            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-            <script>
-            var typed = new Typed('#typed', {
-                strings: ["Memes", "Love", "friendship","शेयर"],
-                backSpeed: 50,
-                typeSpeed: 60,
-                loop: true
-            });
-            </script>
         </div>
-        <br>
-        <br>
-        <div id='products' class="col-lg-9 mx-auto">
-			<div class="row mx-auto">
-            {% for post in posts %}
-                <div class="card mx-auto mb-3" id="memes" style="width: 20rem;">
-                    <div class="card-header"> </div>
-                    <img src="{{post.url}}" class="card-img-top" alt="meme" />
-                    <div class="card-body">
-                        <h3 align="center" class="card-title">{{ post.name }}</h3>
-                        <p align="center" class="card-text">{{ post.caption }}</p>
-                    </div>
-                    </div>
-                
-            {% endfor %}
-        </div>
+
+        {% endfor %}
     </div>
-    {% endblock %}   
+</div>
+{% endblock %}

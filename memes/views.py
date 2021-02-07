@@ -1,4 +1,4 @@
-from .serializers import PostSerializer
+from .serializers import PostSerializer, PostUpdateSeralizer
 from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework import generics, permissions, status
@@ -33,8 +33,8 @@ class PostList(generics.ListCreateAPIView):
         )
 
 
-class PostParticular(generics.RetrieveAPIView):
+class PostParticular(generics.RetrieveUpdateAPIView):
 
     queryset = Post.objects.all()
-    serializer_class = PostSerializer
+    serializer_class = PostUpdateSeralizer
     permission_classes = [permissions.AllowAny]

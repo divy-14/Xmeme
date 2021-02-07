@@ -6,3 +6,11 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ['id', 'name', 'caption', 'url']
+
+
+class PostUpdateSeralizer(serializers.ModelSerializer):
+    name = serializers.ReadOnlyField()
+
+    class Meta:
+        model = Post
+        fields = ['id', 'name', 'caption', 'url']

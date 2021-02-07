@@ -17,3 +17,13 @@ class PostForm(forms.ModelForm):
             'caption',
             'url',
         ]
+
+
+class PostPartialForm(forms.ModelForm):
+
+    class Meta:
+        model = Post
+        fields = [
+            'caption',
+            'url',
+        ]

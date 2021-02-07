@@ -18,12 +18,41 @@
 <br>
 <br>
 
+{% if messages %}
+{% for message in messages %}
+<h4 align="center" style=color:rgb(44, 228, 44)>{{ message }}</h4>
+{% endfor %}
+{% endif %}
+<br>
+<br>
+
 <div class="card mx-auto mb-3" id="memes" style="width: 20rem;">
     <div class="card-header"> </div>
-    <img src="{{post.url}}" class="card-img-top" alt="meme" />
+    <img src="{{form.url}}" class="card-img-top" alt="meme" />
     <div class="card-body">
-        <h3 align="center" class="card-title">{{ post.name }}</h3>
-        <p align="center" class="card-text">{{ post.caption }}</p>
+        <h3 align="center" class="card-title">{{ form.name }}</h3>
+        <p align="center" class="card-text">{{ form.caption }}</p>
+    </div>
+</div>
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="caption">Caption</label>
+                <textarea name="caption" class="form-control" id="caption" required>{{ form.caption }}</textarea>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="url">Meme Url</label>
+                <input type="text" name="url" class="form-control" id="url" value='{{ form.url }}' required>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Edit and Submit</button>
+            <br>
+            <br>
+        </form>
     </div>
 </div>
 

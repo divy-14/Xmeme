@@ -2,7 +2,7 @@ body{
     background-image: url('persian.png');
     font-family: 'Hind', sans-serif;
     background-size: cover;
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
 }
 #memes{
     background-image: url('ember.png');

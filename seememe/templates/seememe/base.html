@@ -19,6 +19,9 @@
 
   <body>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    
     <style>
       /* MOBILE */
       @media only screen and (max-width: 1024px) {
@@ -45,49 +48,117 @@
         }
 
       }
-    </style>
+    </style>    
 
+    <div id="wrapper">
+        <nav id="topNav" class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand" href="{% url 'postmeme-home' %}">
+              <img src="{% static "seememe/Logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Divy's Logo">
+              <span>Divy Mohan Rai</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.linkedin.com/in/divymohan/" target="_blank">LinkedIn</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://twitter.com/H3LL_codes" target="_blank">Twitter</a>
+                </li>
+                <li>
+                  <a role="button" href="{% url 'seememe-home' %}" class="btn btn-primary">See Memes</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
 
-
-
-    <nav id="topNav" class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="{% url 'postmeme-home' %}">
-          <img src="{% static "seememe/Logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Divy's Logo">
-          <span>Divy Mohan Rai</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse text-center" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.linkedin.com/in/divymohan/" target="_blank">LinkedIn</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://twitter.com/H3LL_codes" target="_blank">Twitter</a>
-            </li>
-            <li>
-              <a role="button" href="{% url 'seememe-home' %}" class="btn btn-primary">See Memes</a>
-            </li>
-          </ul>
+        <br>
+        <br>
+        
+        <div class="container">
+          {% block content %}{% endblock %}
         </div>
-      </div>
-    </nav>
 
-    <br>
-    <br>
-    
-    <div class="container">
-      {% block content %}{% endblock %}
+        <footer class="bg-light text-center text-lg-start">
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2021 Copyright:
+            <a class="text-dark" href="https://divymr.tech/" target="_blank">Divy Mohan Rai</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+
     </div>
-  
+    <button type="button" id="BackTop" class="toTop-arrow" style="z-index: 100;"></button>
+
+    <script>
+      // Functions scrolling upwards
+      $(function () {
+          $('#BackTop').click(function () {
+              $('html,body').animate({scrollTop: 0}, 500);
+          });
+          $(window).scroll(function () {
+              if ($(this).scrollTop() > 300) {
+                  $('#BackTop').fadeIn(300);
+              } else {
+                  $('#BackTop').stop().fadeOut(300);
+              }
+          }).scroll();
+      });
+    </script>
+
+    <style>
+      /* Size, Position, Style of Button Border*/
+      .toTop-arrow {
+          width: 3.5rem;
+          height: 3.5rem;
+          padding: 0;
+          margin: 0;
+          border: 0;
+          border-radius: 33%;
+          opacity: 0.7;
+          background: rgb(175, 63, 63);
+          cursor: pointer;
+          position: fixed;
+          right: 1.5rem;
+          bottom: 1.5rem;
+          display: none;
+      }
+
+      /* Draw the up arrow in the button*/
+      .toTop-arrow::before, .toTop-arrow::after {
+          width: 31px;
+          height: 7px;
+          border-radius: 50%;
+          background: rgb(255, 255, 255);
+          position: absolute;
+          content: "";
+       }
+
+      .toTop-arrow::before {
+          transform: rotate(-45deg) translate(0, -50%);
+          left: 0.4rem;
+      }
+
+      .toTop-arrow::after {
+          transform: rotate(45deg) translate(0, -50%);
+          right: 0.4rem;
+      }
+
+      /* Unfocus when clicking a button*/
+      .toTop-arrow:focus {
+          outline: none;
+      }
+    </style>
     
     <!-- Optional JavaScript; choose one of the two! -->
+    
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 

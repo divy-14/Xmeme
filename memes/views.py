@@ -51,8 +51,15 @@ class PostParticular(generics.RetrieveUpdateAPIView):
         try:
             testmodel_object = Post.objects.get(pk=pk)
             # set partial=True to update a data partially
+
+            # we do not allow to change names
+            if "name" in request.data:
+                return Response(status=status.HTTP_403_FORBIDDEN)
+
+            # we change only url and caption
             serializer = PostUpdateSeralizer(
                 testmodel_object, data=request.data, partial=True)
+            print(request.data)
             if serializer.is_valid():
                 serializer.save()
                 return Response(status=status.HTTP_200_OK)

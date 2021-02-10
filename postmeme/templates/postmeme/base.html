@@ -19,6 +19,31 @@
   </head>
   <body>
 
+
+    <style>
+      /* MOBILE */
+      @media only screen and (max-width: 1024px) {
+
+        .newtext {
+          font-size: 30px;
+          height: 50px;
+        }
+        body{
+          background-size: 1000px 1000px;
+        }
+      }
+
+      /* DESKTOP */
+      @media only screen and (min-width: 1024px) {
+
+        .newtext {
+          font-size: 35px;
+          height: 50px;
+        }
+
+      }
+    </style>
+
     <nav id="topNav" class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand" href="{% url 'postmeme-home' %}">

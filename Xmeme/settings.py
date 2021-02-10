@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'seememe',
     'memes',
     'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [

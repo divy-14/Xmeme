@@ -44,34 +44,50 @@
       }
     </style>
 
-    <nav id="topNav" class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="{% url 'postmeme-home' %}">
-          <img src="{% static "seememe/Logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Divy's Logo">
-          <span>Divy Mohan Rai</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse text-center" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.linkedin.com/in/divymohan/" target="_blank">LinkedIn</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://twitter.com/H3LL_codes" target="_blank">Twitter</a>
-            </li>
-            <li>
-              <a role="button" href="{% url 'seememe-home' %}" class="btn btn-primary">See Memes</a>
-            </li>
-          </ul>
+    <div class="wrapper">
+      <nav id="topNav" class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'postmeme-home' %}">
+            <img src="{% static "seememe/Logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Divy's Logo">
+            <span>Divy Mohan Rai</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-center" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/divymohan/" target="_blank">LinkedIn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://twitter.com/H3LL_codes" target="_blank">Twitter</a>
+              </li>
+              <li>
+                <a role="button" href="{% url 'seememe-home' %}" class="btn btn-primary">See Memes</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+  
+      <div class="container">
+        {% block content %}{% endblock %}
       </div>
-    </nav>
 
-    <div class="container">
-      {% block content %}{% endblock %}
+      <footer class="fixed-bottom text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: white;">
+            © 2021 Copyright:
+          <a class="text-light" href="https://divymr.tech/" target="_blank">Divy Mohan Rai</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+      </style>
     </div>
+    
+    
+
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

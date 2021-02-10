@@ -24,17 +24,17 @@
             {% csrf_token %}
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" name="name" class="form-control" id="name" required>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter your good name" required>
             </div>
             <br>
             <div class="form-group">
                 <label for="caption">Caption</label>
-                <textarea name="caption" class="form-control" id="caption" required></textarea>
+                <textarea name="caption" class="form-control" id="caption" placeholder="Enter a small and catchy caption" required></textarea>
             </div>
             <br>
             <div class="form-group">
                 <label for="url">Meme Url</label>
-                <input type="text" name="url" class="form-control" id="url" required>
+                <input type="text" name="url" class="form-control" id="url" placeholder="Enter the image url link" required>
             </div>
             <br>
             <button type="submit" class="btn btn-primary">Save</button>

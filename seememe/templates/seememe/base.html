@@ -19,6 +19,37 @@
 
   <body>
 
+    <style>
+      /* MOBILE */
+      @media only screen and (max-width: 1024px) {
+
+        .newtext {
+          font-size: 30px;
+          height: 50px;
+        }
+        #memes{
+          width: 20rem !important;          
+        }
+        .card-img-top {
+          width: 100%;
+          height: 70vw;
+        }
+      }
+
+      /* DESKTOP */
+      @media only screen and (min-width: 1024px) {
+
+        .newtext {
+          font-size: 35px;
+          height: 50px;
+        }
+
+      }
+    </style>
+
+
+
+
     <nav id="topNav" class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand" href="{% url 'postmeme-home' %}">

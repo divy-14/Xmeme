@@ -4,16 +4,8 @@ services:
   
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8081
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8081"
     volumes:
       - .:/code
     ports:
       - "8081:8081"
-    depends_on:
-    - migration
-
-  migration:
-    build: .
-    command: bash -c "python manage.py makemigrations && python manage.py migrate"
-    volumes:
-      - .:/code

@@ -9,8 +9,7 @@ Xmeme is a WebApp where people can share memes, some fun moments with other peop
   <li> Enter the meme url, url can contain all image types including support for gifs</li>
   <li> Well want to edit the meme url, you are free to do so hit the edit meme button and you are good to go</li>
   <li> You can use it from your desktop or from the comfort of your mobile device (Resposnive Design and Layout)</li>
-  <li></li>
-  <li></li>
+  <li> Inbuilt API to fetch details about memes in any easy to go format</li>
 </ul>
 
 <h3><a href="https://h3llcodes.pythonanywhere.com/memes" target="_blank">Xmeme API</a>:</h3>

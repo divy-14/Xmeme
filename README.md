@@ -30,7 +30,7 @@ If simply uploading details in a form does not satisfy your desire well I got yo
 <h1 align="center">YouTube Demo Video</h1>
 
 <p align="center">
-  <a href="https://youtu.be/4bmlVy1W9Y0"><img src="https://github.com/divy-14/Data-structures-and-Algorithms/blob/master/Result_images/xmeme_logo.gif" alt="demo Xmeme" width="800px" height="600px"></a>
+  <a href="https://youtu.be/4bmlVy1W9Y0"><img src="https://github.com/divy-14/Data-structures-and-Algorithms/blob/master/Result_images/xmeme_logo.gif" alt="demo Xmeme" width="600px" height="400px"></a>
 </p>
 
 <h1 align="center">Found a Bug</h1>

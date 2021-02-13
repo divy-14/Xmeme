@@ -35,7 +35,7 @@ If simply uploading details in a form does not satisfy your desire well I got yo
 
 <h1 align="center">Found a Bug</h1>
 <p> 
-If you find any bug or have any feature request, feel free to raise an issue or contact me on : <a href="mailto:divymohanrai@gmail.com"> Divy Mohan Rai </a> <br>
+If you find any bug or have any feature request, feel free to raise an issue or contact me on : <a href="mailto:divymohanrai@gmail.com"> Divy Mohan Rai </a>, 
 If you want to contribute to this project please create a pull request.
 </p>
 

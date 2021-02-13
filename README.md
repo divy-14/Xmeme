@@ -59,7 +59,7 @@ If simply uploading details in a form does not satisfy your desire well I got yo
   <a href="https://youtu.be/4bmlVy1W9Y0" target="_blank"><img src="https://github.com/divy-14/Data-structures-and-Algorithms/blob/master/Result_images/xmeme_logo.gif" alt="demo Xmeme" width="600px" height="500px"></a>
 </p>
 
-
+<br>
 <h1 align="center">Found a Bug</h1>
 <p> 
 If you find any bug or have any feature request, feel free to raise an issue or contact me on : <a href="mailto:divymohanrai@gmail.com"> Divy Mohan Rai </a>, 

@@ -26,6 +26,33 @@ If simply uploading details in a form does not satisfy your desire well I got yo
   
 </ul>
 
+<div align="center"><h1 align="center">Setup Xmeme</h1></div>
+<h3>Using the bash scripts:</h3>
+<ul>
+  <li> Clone the repo, cd into the repo</li>
+  <li>
+      <ul> Run command
+      <li> <b>chmod +x test_server.sh</b> </li>
+      <li> <b> ./test_server.sh </b> </li>
+      </ul>
+  </li>
+  <li> test_server.sh will initiate the process for installing all the required dependencies, and then will setup the project. You can sut back and relax as the complete setup process is autmoated 😃 </li>
+  <li> After the setup is complete some test curl commands are run to ensure proper installation </li>
+  <li> Now you can use the project in your local environment make your own changes etc.</li>
+</ul>
+
+<h3>Using the DOCKERFILE:</h3>
+<ul>
+  <li> Clone the repo, cd into the repo</li>
+  <li>
+      <ul> Run command
+      <li> <b>docker-compose up -d</b> </li>
+      </ul>
+  </li>
+  <li> The docker file first installs all the necessary files for running python3 by using the prebuilt python3 image and then setup the docker container to run according to the docker-compose.yml file</li>
+  <li> The -d flag ensures that the container is active in the background and you can start with the development asap 😀 </li>
+</ul>
+
 <h1 align="center">YouTube Demo Video</h1>
 
 <p align="center">

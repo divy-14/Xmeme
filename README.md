@@ -30,8 +30,8 @@ If simply uploading details in a form does not satisfy your desire well I got yo
 <h3>Using the bash scripts:</h3>
 <ul>
   <li> Clone the repo, cd into the repo</li>
-  <li>
-      <ul> Run command
+  <li> Run command
+      <ul> 
       <li> <b>chmod +x test_server.sh</b> </li>
       <li> <b> ./test_server.sh </b> </li>
       </ul>
@@ -44,8 +44,8 @@ If simply uploading details in a form does not satisfy your desire well I got yo
 <h3>Using the DOCKERFILE:</h3>
 <ul>
   <li> Clone the repo, cd into the repo</li>
-  <li>
-      <ul> Run command
+  <li> Run command
+      <ul> 
       <li> <b>docker-compose up -d</b> </li>
       </ul>
   </li>
@@ -53,11 +53,12 @@ If simply uploading details in a form does not satisfy your desire well I got yo
   <li> The -d flag ensures that the container is active in the background and you can start with the development asap 😀 </li>
 </ul>
 
+<br>
 <h1 align="center">YouTube Demo Video</h1>
-
 <p align="center">
   <a href="https://youtu.be/4bmlVy1W9Y0" target="_blank"><img src="https://github.com/divy-14/Data-structures-and-Algorithms/blob/master/Result_images/xmeme_logo.gif" alt="demo Xmeme" width="600px" height="500px"></a>
 </p>
+
 
 <h1 align="center">Found a Bug</h1>
 <p> 

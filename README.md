@@ -95,7 +95,7 @@ If simply uploading details in a form does not satisfy your desire well I got yo
 </li>
 </ul>
 
-<h3><a href="https://h3llcodes.pythonanywhere.com/swagger-ui/" target="_blank">Swagger :</h3>
+<h3><a href="https://h3llcodes.pythonanywhere.com/swagger-ui/" target="_blank">Swagger :</a></h3>
 <p><b>Why Swagger?</b> Swagger is a set of rules (in other words, a specification) for a format describing REST APIs. The format is both machine-readable and human-readable. As a result, it can be used to share documentation among product managers, testers and developers</p>
 
 

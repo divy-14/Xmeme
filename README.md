@@ -26,7 +26,7 @@ If simply uploading details in a form does not satisfy your desire well I got yo
   
 </ul>
 
-<div align="center"><h1 align="center">Setup Xmeme</h1></div>
+<div align="center"><h1 align="center">Setup Xmeme on your Local Machine (Linux or WSL windows)</h1></div>
 <h3>Using the bash scripts:</h3>
 <ul>
   <li> Clone the repo, cd into the repo</li>

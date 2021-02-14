@@ -60,6 +60,47 @@ If simply uploading details in a form does not satisfy your desire well I got yo
 </p>
 
 <br>
+<div align="center"><h1 align="center">Xmeme main components: Brief Walkthorugh</h1></div>
+
+<h3>Tech Stack:</h3>
+<ul>
+<li>
+<ul> <b>Backend:</b>
+<li> Django & Django Rest Framework</li>
+</ul>
+</li>
+<li>
+<ul> <b>Frontend:</b>
+<li> HTML, CSS</li>
+<li> BOOTSTRAP 5 CSS</li>
+<li> JAVASCRIPT and JQUERY</li>
+</ul>
+</li>
+</ul>
+
+<h3>Components Xmeme:</h3>
+<ul>
+<li>
+<ul> <b>Seememe:</b>
+<li> This django app handles the functionality for the page where we see the memes and edit the memes </li>
+<li> Connects with the backend and fetches the memes from it </li>
+</ul>
+</li>
+
+<li>
+<ul> <b>Postmeme:</b>
+<li> This django app handles the functionality for the page where the user posts or submit the memes </li>
+<li> Connects with the backend and sends data to it </li>
+</ul>
+</li>
+</ul>
+
+<h3><a href="https://h3llcodes.pythonanywhere.com/swagger-ui/" target="_blank">Swagger :</h3>
+<p><b>Why Swagger?</b> Swagger is a set of rules (in other words, a specification) for a format describing REST APIs. The format is both machine-readable and human-readable. As a result, it can be used to share documentation among product managers, testers and developers</p>
+
+
+
+<br>
 <h1 align="center">Found a Bug</h1>
 <p> 
 If you find any bug or have any feature request, feel free to raise an issue or contact me on : <a href="mailto:divymohanrai@gmail.com"> Divy Mohan Rai </a>, 

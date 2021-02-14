@@ -46,7 +46,7 @@ If simply uploading details in a form does not satisfy your desire well I got yo
   <li> Clone the repo, cd into the repo</li>
   <li> Run command
       <ul> 
-      <li> <b>docker-compose up -d</b> </li>
+      <li> <b>docker-compose up -d</b> ( -d flag to start the server in detached mode and allow the server to run in the background) </li>
       </ul>
   </li>
   <li> The docker file first installs all the necessary files for running python3 by using the prebuilt python3 image and then setup the docker container to run according to the docker-compose.yml file</li>
@@ -64,31 +64,35 @@ If simply uploading details in a form does not satisfy your desire well I got yo
 
 <h3>Tech Stack:</h3>
 <ul>
-<li>
-<ul> <b>Backend:</b>
+<li> <b>Backend:</b>
+<ul> 
 <li> Django & Django Rest Framework</li>
 </ul>
 </li>
-<li>
-<ul> <b>Frontend:</b>
+<li> <b>Frontend:</b>
+<ul> 
 <li> HTML, CSS</li>
 <li> BOOTSTRAP 5 CSS</li>
 <li> JAVASCRIPT and JQUERY</li>
 </ul>
+<li> <b>Database:</b>
+<ul> 
+<li> SQLite </li>
+</ul> 
 </li>
 </ul>
 
 <h3>Components Xmeme:</h3>
 <ul>
-<li>
-<ul> <b>Seememe:</b>
+<li> <b>Seememe:</b>
+<ul> 
 <li> This django app handles the functionality for the page where we see the memes and edit the memes </li>
 <li> Connects with the backend and fetches the memes from it </li>
 </ul>
 </li>
 
-<li>
-<ul> <b>Postmeme:</b>
+<li> <b>Postmeme:</b>
+<ul> 
 <li> This django app handles the functionality for the page where the user posts or submit the memes </li>
 <li> Connects with the backend and sends data to it </li>
 </ul>

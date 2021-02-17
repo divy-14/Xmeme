@@ -1,14 +1,14 @@
 
 <h1 align="center"><a href="https://h3llcodes.pythonanywhere.com" target="_blank">Xmeme</a></h1>
   
-Xmeme is a WebApp where people can share memes, some fun moments with other people without any need to login and singup. You just spread happiness 😁
+Xmeme is a WebApp where people can share memes, some fun moments with other people without any need to login and signup. You just spread happiness 😁
 
 <h3>Some Key Features of Xmeme App:</h3>
 <ul>
   <li> You do not need to sign up to share your memes</li>
   <li> Enter the meme url, url can contain all image types including support for gifs</li>
   <li> Well want to edit the meme url, you are free to do so hit the edit meme button and you are good to go</li>
-  <li> You can use it from your desktop or from the comfort of your mobile device (Resposnive Design and Layout)</li>
+  <li> You can use it from your desktop or from the comfort of your mobile device (Responsive Design and Layout)</li>
   <li> Inbuilt API to fetch details about memes in any easy to go format</li>
 </ul>
 
@@ -36,7 +36,7 @@ If simply uploading details in a form does not satisfy your desire well I got yo
       <li> <b> ./test_server.sh </b> </li>
       </ul>
   </li>
-  <li> test_server.sh will initiate the process for installing all the required dependencies, and then will setup the project. You can sut back and relax as the complete setup process is autmoated 😃 </li>
+  <li> test_server.sh will initiate the process for installing all the required dependencies, and then will setup the project. You can sit back and relax as the complete setup process is autmoated 😃 </li>
   <li> After the setup is complete some test curl commands are run to ensure proper installation </li>
   <li> Now you can use the project in your local environment make your own changes etc.</li>
 </ul>
